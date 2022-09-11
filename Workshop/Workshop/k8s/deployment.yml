@@ -1,0 +1,27 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apidotnet
+  labels:
+    app: weather
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather
+  template:
+    metadata:
+      labels:
+        app: weather
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "weather"
+        dapr.io/app-port: "80"
+        dapr.io/log-level: "debug"  
+    spec:
+      containers:
+      - name: apidotnet
+        image: sshrav/workshop:7.1
+        ports:
+        - containerPort: 80
+        - containerPort: 443

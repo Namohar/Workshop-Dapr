@@ -1,0 +1,8 @@
+﻿apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: env-config 
+data:
+  MSSQL_PID: "Developer"
+  ACCEPT_EULA: "Y"
+  MSSQL_AGENT_ENABLED: "true"

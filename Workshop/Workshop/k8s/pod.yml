@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Pod
+metadata:
+  name: apiapp
+  labels:
+    app.kubernetes.io/name: testapplication
+spec:
+  containers:
+  - name: apiapp
+    image: sshrav/workshop:1.0
+    ports:
+      - containerPort: 80
+        name: http-web-svc
