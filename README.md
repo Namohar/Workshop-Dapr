@@ -1,6 +1,6 @@
-Workshop
+# Workshop
 
-Service to Service:
+## Service to Service:
 
 dapr run --app-port 5023 --app-id weather2 --app-protocol http --dapr-http-port 3501 -- dotnet run
 
@@ -10,17 +10,17 @@ curl http://localhost:3500/v1.0/invoke/weather2/method/WeatherForecast
 
 curl http://localhost:3500/v1.0/invoke/weather/method/WeatherForecast
 
-K8S Deploy
+### K8S Deploy
 
 kubectl port-forward pod/apidotnet2-587986775d-qtkqt  8080:80
 
 curl http://localhost:8080/WeatherForecast
 
-State Management
+## State Management
 
 dapr run --app-id order-processor --components-path ../../../components/ -- dotnet run
 
-Middleware
+## Middleware
 
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 
