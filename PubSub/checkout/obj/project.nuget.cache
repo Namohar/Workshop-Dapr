@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fn6UJ63+vVTT9uuMX0bMKpMW54HWUUjpGQyWHvhjGmX9MK+CR/t/1asRXYpoB761zt0mZAdcp1mAv2dVmbbfTw==",
+  "success": true,
+  "projectFilePath": "/Users/sarvananaidu/Documents/GitHub/service-invocation/PubSub/checkout/checkout.csproj",
+  "expectedPackageFiles": [
+    "/Users/sarvananaidu/.nuget/packages/cloudnative.cloudevents/2.3.1/cloudnative.cloudevents.2.3.1.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/dapr.aspnetcore/1.8.0/dapr.aspnetcore.1.8.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/dapr.client/1.8.0/dapr.client.1.8.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/google.api.commonprotos/2.2.0/google.api.commonprotos.2.2.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/google.protobuf/3.15.0/google.protobuf.3.15.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/grpc.core.api/2.32.0/grpc.core.api.2.32.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/grpc.net.client/2.32.0/grpc.net.client.2.32.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/grpc.net.common/2.32.0/grpc.net.common.2.32.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/microsoft.extensions.logging.abstractions/3.0.3/microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/system.diagnostics.diagnosticsource/4.5.1/system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/system.io.pipelines/4.7.2/system.io.pipelines.4.7.2.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/system.net.http.json/5.0.0/system.net.http.json.5.0.0.nupkg.sha512",
+    "/Users/sarvananaidu/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,33 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: order_pub_sub
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: localhost:6379
+  - name: redisPassword
+    value: ""  
+    
+
+#apiVersion: dapr.io/v1alpha1
+#kind: Component
+#metadata:
+#  name: sampletopic
+  #namespace: <NAMESPACE>
+#spec:
+#  type: bindings.azure.eventhubs
+#  version: v1
+#  metadata:
+#  - name: connectionString      # Azure EventHubs connection string
+#    value: "Endpoint=sb://shr-ns.servicebus.windows.net/;SharedAccessKeyName=prajyot;SharedAccessKey=1mlwQYdtGfhuzn+pl+l2BW0NsaVF02PcyaXdvwIc9Hg=;EntityPath=hubtestcdc"
+#  - name: consumerGroup         # EventHubs consumer group
+#    value: "shravan"
+#  - name: storageAccountName    # Azure Storage Account Name
+#    value: "debcdc"
+#  - name: storageAccountKey     # Azure Storage Account Key
+#    value: "hq+OH+sOZZrj9NjSPgVAmQAHc3KMVoMwChzUREwW3BBtV4RkWgvoqJJcMtw7AvAXrK/jclmVl/Ag+ASt7XSzCg=="
+#  - name: storageContainerName  # Azure Storage Container Name
+#    value: "cdck"        

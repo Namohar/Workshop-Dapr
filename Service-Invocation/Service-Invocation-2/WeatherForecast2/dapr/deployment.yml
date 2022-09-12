@@ -1,26 +1,26 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apidotnet2
+  name: proxy
   labels:
-    app: weather2
+    app: proxy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: weather2
+      app: proxy
   template:
     metadata:
       labels:
-        app: weather2
+        app: proxy
       annotations:
         dapr.io/enabled: "true"
-        dapr.io/app-id: "weather2"
+        dapr.io/app-id: "proxy"
         dapr.io/app-port: "80"
         dapr.io/log-level: "debug"  
     spec:
       containers:
-      - name: apidotnet2
+      - name: proxy
         image: sshrav/workshop2:1.6
         ports:
         - containerPort: 80
