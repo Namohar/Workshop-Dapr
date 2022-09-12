@@ -1,0 +1,39 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: azuresec
+data:
+  AzureWebJobsStorage: Tm9uZQ==
+  FUNCTIONS_WORKER_RUNTIME: bm9kZQ==
+  cosmosdb: QWNjb3VudEVuZHBvaW50PWh0dHBzOi8vc2hybnMuZG9jdW1lbnRzLmF6dXJlLmNvbTo0NDMvO0FjY291bnRLZXk9WEpiRDBNTFNmSVdyeFltczZGMm1KOVN5SjRyNzlBeENCRkx5RkNmcDVwdWdVekIwTEtYMThKalRmM3lWdjhVMTk3eTcxeDdSdlFOTWdUTDZNbEVYcHc9PTs=
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azfuncapp
+  labels:
+    app: azfuncapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azfuncapp
+  template:
+    metadata:
+      labels:
+        app: azfuncapp
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "azfuncapp"
+        dapr.io/app-port: "80"
+        dapr.io/log-level: "debug"   
+    spec:
+      containers:
+      - name: azfuncapp
+        image: sshrav/azfunc:1.0
+        imagePullPolicy: Always       
+        envFrom:
+        - secretRef:
+            name: azuresec        
+      imagePullSecrets:
+      - name: acr-secret
