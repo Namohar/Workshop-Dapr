@@ -99,3 +99,10 @@ This POC demonstrates the working model for Azure Function with Dapr Extension d
     docker push sshrav/azfunc:1.0
     kubectl apply -f deployment.yaml
 
+## Secret Store
+
+    cd ./Secrets/sdk/order-processor
+    dotnet restore
+    dotnet build
+    dapr run --app-id order-processor --components-path ../../components/ -- dotnet run
+
