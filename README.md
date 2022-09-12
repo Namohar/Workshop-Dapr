@@ -92,3 +92,10 @@ dotnet build -o bin/ extensions.csproj
 ### NVM 
     export NVM_DIR=~/.nvm
     source $(brew --prefix nvm)/nvm.sh
+
+## K8S
+
+    docker build . -t sshrav/azfunc:1.0
+    docker push sshrav/azfunc:1.0
+    kubectl apply -f deployment.yaml
+
