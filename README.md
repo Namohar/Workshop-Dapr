@@ -2,11 +2,11 @@
 
 ## Service to Service:
 
-dapr run --app-port 5023 --app-id weather2 --app-protocol http --dapr-http-port 3501 -- dotnet run
+dapr run --app-port 5023 --app-id proxy --app-protocol http --dapr-http-port 3501 -- dotnet run
 
 dapr run --app-port 5051 --app-id weather --app-protocol http --dapr-http-port 3500 -- dotnet run
 
-curl http://localhost:3500/v1.0/invoke/weather2/method/WeatherForecast
+curl http://localhost:3500/v1.0/invoke/proxy/method/WeatherForecast
 
 curl http://localhost:3500/v1.0/invoke/weather/method/WeatherForecast
 
