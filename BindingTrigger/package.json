@@ -1,0 +1,25 @@
+{
+  "name": "ruleengineazurefuncpoc",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^1.2.3",
+    "axios": "^0.25.0",
+    "json-rules-engine": "^5.0.3",
+    "typescript": "^4.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.2.3",
+    "json-rules-engine": "^5.0.3",
+    "typescript": "^4.0.0",
+    "uuid": "^8.3.2"
+  }
+}

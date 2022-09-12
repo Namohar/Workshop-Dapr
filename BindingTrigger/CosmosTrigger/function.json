@@ -1,0 +1,35 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",      
+      "connectionStringSetting": "cosmosdb",
+      "databaseName": "ShrTest",
+      "collectionName": "ShrFeed",
+      "createIfNotExists": true,
+      "createLeaseCollectionIfNotExists": true,
+      "connectionMode": "Gateway",
+            "protocol": "Https",
+            "leaseOptions": {
+                "leasePrefix": "prefix1"
+            }
+    },
+    {
+      "type": "cosmosdb",
+      "name": "history",
+      "direction": "out",      
+      "connectionStringSetting": "cosmosdb",
+      "databaseName": "ShrTest",
+      "collectionName": "ShrHistory",
+      "createIfNotExists": true,
+      "createLeaseCollectionIfNotExists": true,
+      "connectionMode": "Gateway",
+            "protocol": "Https",
+            "leaseOptions": {
+                "leasePrefix": "prefix1"
+            }
+    }
+  ],
+  "scriptFile": "../dist/CosmosTrigger/index.js"
+}

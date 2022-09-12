@@ -1,0 +1,11 @@
+###
+
+# Sarvana APIM dapr binding
+
+POST https://apim-bkg.nextgen.com/clone/servicebus
+
+
+{
+    "personalFoulCount": 10,
+    "gameDuration": 32
+}
