@@ -106,3 +106,22 @@ This POC demonstrates the working model for Azure Function with Dapr Extension d
     dotnet build
     dapr run --app-id order-processor --components-path ../../components/ -- dotnet run
 
+## Bindings
+
+    helm repo add bitnami https://charts.bitnami.com/bitnami
+    helm repo update
+    kubectl create ns kafka
+    helm install dapr-kafka bitnami/kafka --wait --namespace kafka -f ./kafka-non-persistence.yaml
+    kubectl -n kafka get pods
+    kubectl apply -f ./deploy
+    kubectl rollout status deploy/bindings-nodeapp
+    kubectl rollout status deploy/bindings-pythonapp
+    kubectl get pods
+    kubectl logs --selector app=bindingspythonapp -c python --tail=-1
+    kubectl logs --selector app=bindingsnodeapp -c node --tail=-1
+
+### cleanup
+    kubectl delete -f ./deploy
+    helm uninstall dapr-kafka --namespace kafka
+    kubectl delete ns kafka
+
